@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Underdog</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      scroll-behavior: smooth; /* Enable smooth scrolling */
+      font-family: 'Kanit', monospace;
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 500%; /* Three categories side by side */
+      height: 100vh;
+    }
+
+    .menu-category {
+      width: 100vw;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Style for navigation arrows */
+    .arrow {
+      position: fixed;
+      top: 50%;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+      background-color: #fff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .arrow:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .arrow.left {
+      left: 10px;
+    }
+
+    .arrow.right {
+      right: 10px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; /* Center items vertically */
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .price {
+      color: #333;
+      font-weight: bold;
+      padding: 5px;
+      white-space: nowrap;
+    }
+
+    .ingredients {
+      color: #555;
+      text-align: left;
+    }
+
+    h2 {
+      margin: 0; /* Remove default margin */
+      margin-bottom: 5px;
+      font-size: 16px;
+      text-align: left;
+    }
+  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap">
+</head>
+<body>
+
+<div class="menu-container">
+  <div class="menu-category">
+  <section>
+    <h1>Yogurt and Porridge</h1>
+
+    <div class="menu-item">
+      <div>
+        <h2>
+          Yogurt (1,5%)
+          <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+        </h2>
+        <p class="ingredients">With fruits, honey and granola</p>
+      </div>
+      <div class="price">5 €</div>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <h2>
+          Yogurt (1,5%)
+          <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+        </h2>
+        <p class="ingredients">With peanut butter, chocolate and banana</p>
+      </div>
+      <div class="price">5 €</div>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <h2>
+          Yogurt (1,5%)
+          <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+        </h2>
+        <p class="ingredients">With muesli, sour apple, oats, honey, banana and cinnamon</p>
+      </div>
+      <div class="price">5 €</div>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <h2>
+          Porridge
+          <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+        </h2>
+        <p class="ingredients">With almond milk, maple syrup, granola, banana, dried fruits, nuts and cocoa powder</p>
+      </div>
+      <div class="price">5 €</div>
+    </div>
+    <!-- Add more items as needed -->
+  </section>
+  </div>
+
+  <div class="menu-category">
+    <section>
+      <h1>Pancakes</h1>
+  
+      <div class="menu-item">
+        <div>
+          <h2>
+            Honey
+            <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+          </h2>
+          <p class="ingredients">With honey, walnuts, and cinnamon</p>
+        </div>
+        <div class="price">8 €</div>
+      </div>
+  
+      <div class="menu-item">
+        <div>
+          <h2>
+            Chocolate
+            <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+          </h2>
+          <p class="ingredients">With hazelnut praline and petit-beurre biscuits</p>
+        </div>
+        <div class="price">8 €</div>
+      </div>
+  
+      <div class="menu-item">
+        <div>
+          <h2>
+            Cheesecake
+            <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+          </h2>
+          <p class="ingredients">With cream cheesecake, red fruit jam and Oreo biscuit</p>
+        </div>
+        <div class="price">8 €</div>
+      </div>
+  
+      <div class="menu-item">
+        <div>
+          <h2>Lila Pause</h2>
+          <p class="ingredients">With Lila Pause cream, Smarties, rice croquettes and chocolate pearls</p>
+        </div>
+        <div class="price">8 €</div>
+      </div>
+      <!-- Add more items as needed -->
+    </section>
+  </div>
+
+  <div class="menu-category">
+  <section>
+    <h1>Salads</h1>
+  
+    <div class="menu-item">
+      <div>
+        <h2>
+          Healthy Qinoa Salad
+          <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+        </h2>
+        <p class="ingredients">With red and white quinoa, fresh pinneaplem, chlli, chives, cherry tomatoes, mint, spring onion and lime-dressing.</p>
+      </div>
+      <div class="price">7 €</div>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <h2>
+          Lentil Salad
+          <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+        </h2>
+        <p class="ingredients">Lentils, sweet potato, mushroom ragout, tarragon, caramelized onions, roast goat cheese and mustard vinaigrette.</p>
+      </div>
+      <div class="price">7 €</div>
+    </div>
+
+    <div class="menu-item">
+      <div>
+        <h2>Caesar's Salad</h2>
+        <p class="ingredients">iceberg, bacon, chicken nuggets, homemade croutons, parmesan, corn and Caesar's dressing.</p>
+      </div>
+      <div class="price">8 €</div>
+    </div>
+
+    <!-- Add more items as needed -->
+  </section>
+  </div>
+
+  <div class="menu-category">
+    <section>
+      <h1>Eggs & More</h1>
+    
+      <div class="menu-item">
+        <div>
+          <h2>Eggs Benedict Bacon</h2>
+          <p class="ingredients">poached eggs (2pcs) on toasted brioche bread with bacon, hollandaise sauce flavoured with lime-truffle and garlic sprouts.</p>
+        </div>
+        <div class="price">9 €</div>
+      </div>
+  
+      <div class="menu-item">
+        <div>
+          <h2>
+            Eggs Bendict Guacamole
+            <img src="media/vegan.png" alt="Vegan" width="25" style="vertical-align: middle; margin-left: 10px;">
+          </h2>
+          <p class="ingredients">poached eggs (2 pcs) on toasted brioche bread with guacamole, hollandaise sauce flavoured with lime - truffle and chives (Served with salad)</p>
+        </div>
+        <div class="price">9 €</div>
+      </div>
+  
+      <!-- Add more items as needed -->
+    </section>
+    </div>
+
+    <div class="menu-category">
+      <section>
+        <h1>Burgers and Tostadas</h1>
+      
+        <div class="menu-item">
+          <div>
+            <h2>Classic Toast</h2>
+            <p class="ingredients">with turkey and cheese. Served with chips</p>
+          </div>
+          <div class="price">4 €</div>
+        </div>
+    
+        <!-- Add more items as needed -->
+      </section>
+      </div>
+
+
+</div>
+
+<!-- Navigation arrows -->
+<div class="arrow left" onclick="scrollToCategory(-1)">&#8249;</div>
+<div class="arrow right" onclick="scrollToCategory(1)">&#8250;</div>
+
+<script>
+  const categories = document.querySelectorAll('.menu-category');
+  let currentCategory = 0;
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  // Adding audio element
+  const swipeSound = new Audio('/media/flip_page.mp3'); // Replace with the actual path to your sound file
+
+  document.addEventListener('mousedown', handleMouseDown);
+  document.addEventListener('mouseup', handleMouseUp);
+  document.addEventListener('mousemove', handleMouseMove);
+  document.addEventListener('touchstart', handleTouchStart);
+  document.addEventListener('touchend', handleTouchEnd);
+
+  function handleMouseDown(event) {
+    touchStartX = event.clientX;
+  }
+
+  function handleMouseUp(event) {
+    touchEndX = event.clientX;
+    handleSwipe();
+  }
+
+  function handleMouseMove(event) {
+    touchEndX = event.clientX;
+  }
+
+  function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+  }
+
+  function handleTouchEnd(event) {
+    touchEndX = event.changedTouches[0].clientX;
+    handleSwipe();
+  }
+
+  function handleSwipe() {
+    const deltaX = touchEndX - touchStartX;
+
+    if (deltaX > 50) {
+      scrollToCategory(-1, 'start'); // Swipe right
+    } else if (deltaX < -50) {
+      scrollToCategory(1, 'start'); // Swipe left
+    }
+
+    // Play the swipe sound
+    swipeSound.play();
+  }
+
+  function scrollToCategory(direction, alignment) {
+    currentCategory += direction;
+
+    // Ensure the category index stays within bounds
+    if (currentCategory < 0) {
+      currentCategory = 0;
+    } else if (currentCategory >= categories.length) {
+      currentCategory = categories.length - 1;
+    }
+
+    categories[currentCategory].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: alignment });
+  }
+</script>
+
+
+
+</body>
+</html>
